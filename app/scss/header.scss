@@ -1,5 +1,7 @@
 .header {
-    p {
-        color: $primaryColor;
-    }
+   width: 1320px;
+   &__body {
+    display: flex;
+    justify-content: space-between;
+   }
 }

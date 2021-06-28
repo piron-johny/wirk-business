@@ -1,8 +1,17 @@
 @import 'wars';
+body {
+  font-size: 20px;
+}
+.page {
+  max-width: 1440px;
+}
+.container {
+  width: $cont;
+  padding: 10px 0px 10px;
+}
+
+@import 'menu';
+@import 'btn';
 @import 'header';
 @import 'main';
 @import 'footer';
-
-body {
-    font-size: 14px;
-}

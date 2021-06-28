@@ -62,7 +62,11 @@ const includeTask = () => {
 
 const scssTask = () => {
     return gulp.src(config.app.style)
-        .pipe(sass().on('error', sass.logError))
+        .pipe(
+            sass({
+                outputStyle: 'expanded'
+            })
+        )
         .pipe(gulp.dest(config.dist.style))
         .pipe(browserSync.reload({ stream: true }))
 }
@@ -96,3 +100,4 @@ const watchFiles = () => {
 const start = gulp.series(includeTask, scssTask, jsTask, imgTask, fontsTask);
 
 exports.default = gulp.parallel(start, watchFiles, webServer);
+exports.scssTask = scssTask;

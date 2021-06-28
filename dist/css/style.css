@@ -1,5 +1,21 @@
-.header p {
-  color: #e2d3d3; }
-
 body {
-  font-size: 14px; }
+  font-size: 20px;
+}
+
+.page {
+  max-width: 1440px;
+}
+
+.container {
+  width: 1165px;
+  padding: 10px 0px 10px;
+}
+
+.header {
+  width: 1320px;
+}
+
+.header__body {
+  display: flex;
+  justify-content: space-between;
+}
